@@ -1,0 +1,14 @@
+org: particularmockingbird
+app: ssd-api
+service: ssd-api
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  function1:
+    handler: index.handler
+    events:
+      - httpApi: '*'
